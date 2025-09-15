@@ -1,0 +1,23 @@
+.transfers-page {
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.transfers-page h2 {
+  text-align: center;
+  color: #003366;
+}
+
+.transfer-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.transfer-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
