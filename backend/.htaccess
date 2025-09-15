@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Handle clean URLs for PHP files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Bypass Rewrite for files in the uploads directory
+RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Directory permissions
+Options Indexes FollowSymLinks
+Require all granted
